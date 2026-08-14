@@ -31,6 +31,8 @@ model = CNN()
 lossFunction = torch.nn.CrossEntropyLoss()
 optimizer = torch.optim.Adam(model.parameters(),lr=LEARNING_RATE)
 
+model.train()
+
 for epoch in range(EPOCHS):
     lossPerEpoch = 0
     for batch_no ,(image,label) in enumerate(dataLoader):
